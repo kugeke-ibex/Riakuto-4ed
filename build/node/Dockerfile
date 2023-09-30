@@ -49,7 +49,7 @@ USER ${username}
 # no source to be added, and assumes bind mount
 FROM base as dev
 ENV NODE_ENV=development
-ENV PATH=/app/node_modules/.bin:$PATH
+ENV PATH=${workdir}/node_modules/.bin:$PATH
 # RUN npm install --only=development && npm cache clean --force
 # CMD ["nodemon", "index.js"]
 
@@ -60,8 +60,8 @@ COPY --chown=${username}:${username} . .
 #### test (as needed) ####
 # FROM source as test
 # ENV NODE_ENV=development
-# ENV PATH=/app/node_modules/.bin:$PATH
-# COPY --from=dev /app/node_modules /app/node_modules
+# ENV PATH=${workdir}/node_modules/.bin:$PATH
+# COPY --from=dev ${workdir}/node_modules ${workdir}/node_modules
 # RUN npx eslint .
 # RUN npm test
 # CMD ["npm", "run", "test"]
