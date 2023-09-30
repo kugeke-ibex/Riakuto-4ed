@@ -57,7 +57,7 @@
 				"naumovs.color-highlight",
 				"burkeholland.simple-react-snippets",
 				"styled-components.vscode-styled-components",
-        		"Gruntfuggly.todo-tree",
+				"Gruntfuggly.todo-tree",
 				"christian-kohler.path-intellisense",
 				"dbaeumer.vscode-eslint",
 				"donjayamanne.githistory",
@@ -89,7 +89,7 @@
 				"npm.packageManager": "yarn",
 				// sticky scrollの設定
 				"editor.stickyScroll.enabled": true,
-        		"editor.stickyScroll.maxLineCount": 5,
+				"editor.stickyScroll.maxLineCount": 5,
 				"workbench.colorCustomizations": {
 					"editorStickyScroll.background": "#00708D",
 					"editorStickyScrollHover.background": "#59A2B5"
