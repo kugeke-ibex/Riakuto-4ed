@@ -8,7 +8,7 @@ services:
       dockerfile: ../node/Dockerfile
     volumes:
       - type: bind
-        source: "../../app"
+        source: "../../"
         target: "/app"
         consistency: cache
     command:
