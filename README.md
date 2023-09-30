@@ -13,7 +13,7 @@ source ~/.zshrc
 ```
 
 ## Make .default-npm-packages And Install Node.js
-Create a file named .default-npm-packages in your home directory and write the following
+Create a file named `.default-npm-packages` in your home directory and write the following
 
 ```
 yarn
