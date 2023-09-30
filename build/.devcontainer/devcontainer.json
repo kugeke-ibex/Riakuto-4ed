@@ -51,11 +51,18 @@
                 "eamodio.gitlens",
                 "EditorConfig.EditorConfig",
 				"rangav.vscode-thunder-client",
+				"ms-vscode.live-server",
+				"Syler.sass-indented",
+				"streetsidesoftware.code-spell-checker",
+				"naumovs.color-highlight",
+				"burkeholland.simple-react-snippets",
+				"styled-components.vscode-styled-components",
+        		"Gruntfuggly.todo-tree",
 				"christian-kohler.path-intellisense",
 				"dbaeumer.vscode-eslint",
 				"donjayamanne.githistory",
 				"esbenp.prettier-vscode",
-				"formulahendry/vscode-auto-rename-tag",
+				"formulahendry.auto-rename-tag",
 				"MariusAlchimavicius.json-to-ts",
 				"oderwat.indent-rainbow",
 				"stylelint.vscode-stylelint",
@@ -66,12 +73,29 @@
 			// VSCodeの設定を記述 .vscodeフォルダの代わりになる（らしい）
 			"settings": {
 				"terminal.integrated.defaultProfile.linux": "bash",
+				"stylelint.validate": ["css", "scss"],
+				"scss.validate": false,
+				"css.validate": false,
 				"editor.formatOnSave": false,
+				"editor.defaultFormatter": "esbenp.prettier-vscode",
+				"editor.codeActionsOnSave": {
+					"source.fixAll.eslint": true,
+					"source.fixAll.stylelint": true
+				},
 				"editor.tabSize": 2,
 				"editor.wordWrap": "on",
 				"files.insertFinalNewline": true,
 				"files.trimTrailingWhitespace": true,
-				"npm.packageManager": "yarn"
+				"npm.packageManager": "yarn",
+				// sticky scrollの設定
+				"editor.stickyScroll.enabled": true,
+        		"editor.stickyScroll.maxLineCount": 5,
+				"workbench.colorCustomizations": {
+					"editorStickyScroll.background": "#00708D",
+					"editorStickyScrollHover.background": "#59A2B5"
+				},
+				// typescript で絶対パスで import する設定
+				"typescript.preferences.importModuleSpecifier": "non-relative"
 			}
         }
     }
