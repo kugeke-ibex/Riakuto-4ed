@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  frontend:
+    container_name: frontend
+    build:
+      context: .
+      dockerfile: ../node/Dockerfile
+    volumes:
+      - ../../app:/app:cached
+    command:
+      /bin/sh -c "while sleep 1000; do :; done"
+      /bin/bash
+    ports:
+      - 8000:3000
+    tty: true
