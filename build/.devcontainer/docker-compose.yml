@@ -7,10 +7,13 @@ services:
       context: .
       dockerfile: ../node/Dockerfile
     volumes:
-      - ../../app:/app:cached
+      - type: bind
+        source: "../../app"
+        target: "/app"
+        consistency: cache
     command:
       /bin/sh -c "while sleep 1000; do :; done"
       /bin/bash
     ports:
-      - 8000:3000
+      - 3000:3000
     tty: true
