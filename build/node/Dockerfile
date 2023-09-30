@@ -24,8 +24,6 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 EXPOSE 3000
 
-# test
-
 # new way to get node, let's copy in the specific version we want from a docker image
 # this avoids depdency package installs (python3) that the deb package requires
 COPY --from=node /usr/local/include/ /usr/local/include/
