@@ -50,11 +50,28 @@
                 "mhutchie.git-graph",
                 "eamodio.gitlens",
                 "EditorConfig.EditorConfig",
-				"rangav.vscode-thunder-client"
+				"rangav.vscode-thunder-client",
+				"christian-kohler.path-intellisense",
+				"dbaeumer.vscode-eslint",
+				"donjayamanne.githistory",
+				"esbenp.prettier-vscode",
+				"formulahendry/vscode-auto-rename-tag",
+				"MariusAlchimavicius.json-to-ts",
+				"oderwat.indent-rainbow",
+				"stylelint.vscode-stylelint",
+				"VisualStudioExptTeam.vscodeintellicode",
+				"vscode-icons-team.vscode-icons",
+				"wix.vscode-import-cost"
             ],
 			// VSCodeの設定を記述 .vscodeフォルダの代わりになる（らしい）
 			"settings": {
-				"terminal.integrated.defaultProfile.linux": "bash"
+				"terminal.integrated.defaultProfile.linux": "bash",
+				"editor.formatOnSave": false,
+				"editor.tabSize": 2,
+				"editor.wordWrap": "on",
+				"files.insertFinalNewline": true,
+				"files.trimTrailingWhitespace": true,
+				"npm.packageManager": "yarn"
 			}
         }
     }
