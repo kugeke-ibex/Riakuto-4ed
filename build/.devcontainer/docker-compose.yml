@@ -10,7 +10,7 @@ services:
       - type: bind
         source: "../../"
         target: "/app"
-        consistency: cache
+        consistency: cached
     command:
       /bin/sh -c "while sleep 1000; do :; done"
       /bin/bash
