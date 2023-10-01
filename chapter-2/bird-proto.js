@@ -27,3 +27,7 @@ function FlyableBird(name) {
 }
 
 FlyableBird.prototype.__proto__ = Bird.prototype;
+
+// console.log(typeof Bird.prototype); => object
+// console.log(typeof Bird.__proto__); => function
+// console.log(typeof Bird.__proto__.__proto__); => object
