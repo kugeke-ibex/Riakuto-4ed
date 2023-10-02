@@ -35,16 +35,18 @@ FlyableBird.prototype = Object.create(Bird.prototype);
 // console.log(typeof Bird.prototype);           => object
 // console.log(Bird.__proto__);                  => {}
 // console.log(typeof Bird.__proto__);           => function
-// console.log(Bird.__proto__.__proto__)         => [Object: null prototype] {}
+// console.log(Bird.__proto__.__proto__);        => [Object: null prototype] {}
 // console.log(typeof Bird.__proto__.__proto__); => object
 
 flyBird = new FlyableBird('hoge');
-console.log(flyBird instanceof Bird) //       => true
-// console.log(FlyableBird.prototype)         => Bird {}
-// console.log(typeof FlyableBird.prototype); => object
-// console.log(FlyableBird.__proto__);        => {}
-// console.log(typeof FlyableBird.__proto__); => function
-// console.log(Object.getOwnPropertyNames(FlyableBird.__proto__))
+console.log(flyBird instanceof Bird); //                => true
+// console.log(FlyableBird.prototype);                  => Bird {}
+// console.log(typeof FlyableBird.prototype);           => object
+// console.log(FlyableBird.__proto__);                  => {}
+// console.log(typeof FlyableBird.__proto__);           => function
+// console.log(FlyableBird.__proto__.__proto__);        => [Object: null prototype] {}
+// console.log(typeof FlyableBird.__proto__.__proto__); => object
+// console.log(Object.getOwnPropertyNames(FlyableBird.__proto__));
 // =>
 /*
 [
@@ -55,4 +57,4 @@ console.log(flyBird instanceof Bird) //       => true
   'toString'
 ]
 */
-// console.log(Object.getOwnPropertyNames(FlyableBird.prototype)) => []
+// console.log(Object.getOwnPropertyNames(FlyableBird.prototype)); => []
