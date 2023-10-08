@@ -1,0 +1,11 @@
+{
+  "name": "esm",
+  "version": "0.0.0",
+  "description": "Import/Export in ES Modules",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "devDependencies": {
+    "lodash": "^4.17.21"
+  }
+}
