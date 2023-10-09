@@ -1,4 +1,4 @@
-// オブジェクトの方を『インターフェイス』という。
+// オブジェクトの型を『インターフェイス』という。
 interface Color {
   readonly rgb: string;
   opacity: number;
