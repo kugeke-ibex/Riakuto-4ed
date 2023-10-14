@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "commonjs",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": true,
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+    "moduleResolution": "node",
+    "declaration": true,
+    "baseUrl": "src",
+    // "baseUrl": ".",
+    // "paths": {
+    //   "super-awesome": ["super/awesome.d.ts"],
+    //   "yet-another": ["src/others.d.ts"],
+    //   "tests/*": ["tests/types/*", src/tests/types/*],
+    //   "*": ["types/*"]
+    //   },
+  }
+}

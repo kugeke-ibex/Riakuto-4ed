@@ -1,0 +1,69 @@
+// ・target （デフォルト値： es3 ）…… コンパイル後にどのバージョンのJavaScript を出力するか（ ex. es5, es2015, esnext ）
+// ・lib …… コンパイルの際に含める組み込みライブラリを指定する（ ex. es5, es2015, esnext, dom ）
+// ・jsx …… JSX をどのような構成のJavaScript に出力するか（ ex. preserve, react, react-jsx ）
+// ・allowJs …… JavaScript ファイルのインポートを可能にする
+// ・strict （デフォルト値： false ）…… 厳格な型チェックのオプションをすべて有効にする
+// ・useDefineForClassFields （デフォルト値： false ）…… クラスのプロパティの定義にプロパティ初期化子を使うことを強制させる
+// ・noFallthroughCasesInSwitch （デフォルト値： false ） …… switch 文でbreak やreturn のない空のcase エントリーをエラーにする
+// ・module （デフォルト値： target がes5 以前の場合commonjs ・ 、それ以外は es2015 ）…… 出力するモジュールの形式を指定する（ ex. commonjs, amd, es2015, nodenext ）
+// ・moduleResolution （デフォルト値： module が node* の場合は node 、それ以外は classic ）…… モジュールの解決戦略を指定する（ ex. classic, node ）
+// ・resolveJsonModule （デフォルト値： false ）…… JSON ファイルをインポートしてできたオブジェクトに自動的に型をつける
+// ・baseUrl…… モジュールの非相対インポートの起点となるディレクトリを指定する
+// ・paths…… 個別にパターン指定した一連のモジュールの解決を再マッピングする
+// ・esModuleInterop ・ （デフォルト値： false ）…… CommonJS / AMD / UMD 形式のモジュールをES Modules と同様に扱えるようにする
+// ・allowSyntheticDefaultImports （デフォルト値： esModuleInterop の値に追随する）…… 明示的にデフォルトエクスポートしていないモジュールでもデフォルトインポートできるようにする
+// ・forceConsistentCasingInFileNames （デフォルト値： false ）…… インポート時にファイルパス記述の大文字・小文字を区別する
+// ・isolatedModules （デフォルト値： false ）…… すべてのファイルを単一のモジュールとしてコンパイルする場合に安全でないと思われるいくつかの記法をコンパイルエラーにする
+// 有効だと次のようなファイルがコンパイルできなくなる
+// 1. 型を再エクスポートしているファイル
+// 2. モジュールではない（＝エクスポートもインポートもしていない）ファイル
+// 3. const enum メンバーへの参照をしているファイル
+// ・skipLibCheck （デフォルト値： false ）…… .d.ts の型宣言ファイルに対する型チェックをスキップする
+// ・declaration （デフォルト値： composite が有・ 効ならば true 、それ以外は false ）…… コンパイル対象となった各ファイルに対応する.d.ts ファイルを生成する
+// ・noEmit （デフォルト値： false ）…… 型チェックのみを行い、コンパイル結果のファイルを一切出力しない
+// ・outDir …… コンパイル結果を出力するディレクトリを指定する
+
+// tsconfig.json で同じトップ階層に設定できる項目があと5つ存在する。
+// ・files …… コンパイル対象となるファイルを名指しで指定する。拡張子は省略可能だが、後述のinclude と異なり指定にglob パターン は使用できない
+// ・include …… コンパイルの対象を指定する。glob パターンが使え、またディレクトリを指定するとその配下のファイルが再帰的にすべて対象となる
+// ・exclude …… include で指定したコンパイル対象から除外するものを指定する。指定したファイルをコンパイラに読み込ませない設定ではなく、あくまでinclude に例外を指定するだけ
+// tsconfig.json は設定を複数のファイルに分割してそれらを連携させることができる
+// ・extends …… 他の設定ファイルを継承する。双方のファイルに同じ項目の設定があれば、継承先の値で上書きされる
+// ・references …… 他のTypeScript プロジェクトを参照する
+// 参照先のtsconfig.jsonのcompilerOptionsプロパティ内に、compositeを必ずtrueとして設定する。
+
+
+// 大文字と小文字の区別はない。
+{
+  "compilerOptions": {
+  "target": "ESNext",
+  "useDefineForClassFields": true,
+  "lib": ["DOM", "DOM.Iterable", "ESNext"],
+  "allowJs": false,
+  "skipLibCheck": true,
+  "esModuleInterop": false,
+  "allowSyntheticDefaultImports": true,
+  "strict": true,
+  "forceConsistentCasingInFileNames": true,
+  "module": "ESNext",
+  "moduleResolution": "Node",
+  "resolveJsonModule": true,
+  "isolatedModules": true,
+  "noEmit": true,
+  "jsx": "react-jsx"
+  },
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
+
+// strictがtrueだと下記のオプションが有効になる。
+// alwaysStrict …… すべてのソースファイルの先頭に'use strict' が記述されているものとみなし、ECMAScriptのstrictモードでパースする
+// noImplicitAny…… 暗黙的にany が指定されている式や宣言があればエラーにする
+// noImplicitThis…… this が暗黙的にany を表現していればエラーにする
+// strictNullChecks…… 他のすべての型からnull およびundefined を代入不可にする
+// strictBindCallApply…… bind()、call()、apply() メソッド使用時に、その関数に渡される引数の型チェックを行う
+// strictFunctionTypes…… 関数の引数の型チェックが「共変的（ Covariant ）」ではなく、「反変的（ Contravariant ）」 に行われるようにする
+// strictPropertyInitialization…… クラスにおいて宣言だけで初期化されないプロパティがあるとエラーになる（※ strictNullChecksも併せて有効にしておく必要あり）
+// useUnknownInCatchVariables…… catch 文で捕捉した例外をunknown として扱う
+
+
