@@ -16,3 +16,16 @@ React.createElement(
 //   },
 //   key: null,
 // };
+
+/* <MyComponent foo="bar">baz</MyComponent>
+↓
+React.createElement('MyComponent', { foo: 'bar' }, 'baz');
+↓
+{
+type: 'MyComponent',
+props: {
+foo: 'bar',
+children: 'baz'
+},
+key: null,
+} */
