@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-// 無効化コメント
+// 無効化コメント 
 /* eslint-disable @typescript-eslint/semi */
 // const title = import.meta.env.VITE_APP_TITLE;
 // console.dir(import.meta.env);
