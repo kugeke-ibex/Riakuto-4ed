@@ -85,6 +85,7 @@
                 "files.insertFinalNewline": true,
                 "files.trimTrailingWhitespace": true,
                 "npm.packageManager": "yarn",
+                "typescript.enablePromptUseWorkspaceTsdk": true,
                 // sticky scrollの設定
                 "editor.stickyScroll.enabled": true,
                 "editor.stickyScroll.maxLineCount": 5,
