@@ -1,7 +1,7 @@
 #### base ####
 # cache our node version for installing later
 FROM node:20.8.0-slim as node
-FROM ubuntu:mantic-20230912 as base
+FROM ubuntu:plucky-20241213 as base
 ARG username=devcontainer
 ARG useruid=1001
 ARG usergid=${useruid}
