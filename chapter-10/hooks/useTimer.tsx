@@ -5,6 +5,7 @@ export const useTimer = (maxCount: number): [number, () => void] => {
   const [timeLeft, setTimeLeft] = useState(maxCount);
   const tick = () => setTimeLeft((t) => t - 1);
   const reset: (e: SyntheticEvent) => {
+    // 子要素のイベントが発火して、親イベントに伝わらないようにする
     event.stopPropagation();
     setTimeLeft(maxCount);
   };
