@@ -48,13 +48,17 @@ const ProfileWrite: FC<{ count?: number }> = ({ count = 1 }) => {
                 />
                 <Checkbox
                     mt={4}
-                    checked={enabledDeferred}
+                    isChecked={enabledDeferred}
                     onChange={changeEnabledDeferred}
                 >
                     useDeferredValueを有効にする
                 </Checkbox>
             </Box>
-            {enabledDeferred ? deferredUsers : <Users username={deferredUsername} count={count} />}
+            {enabledDeferred ? (
+                deferredUsers
+            ) : (
+                <Users username={deferredUsername} count={count} />
+            )}
         </Container>
     );
 };
