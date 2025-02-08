@@ -5,8 +5,10 @@ import { ChakraProvider, ThemeConfig } from "@chakra-ui/react";
 import { extendTheme } from "@chakra-ui/theme-utils";
 import { HelmetProvider } from "react-helmet-async";
 import { Provider as ReduxProvider } from "react-redux";
-import { createStore } from "redux";
-import { counterReducer, initialState } from "../stores/reducers";
+import { configureStore } from "@reduxjs/toolkit";
+// import { counterReducer, initialState } from "./stores/reducers";
+import { counterSlice } from "./stores/counter";
+
 
 const config: ThemeConfig = {
     initialColorMode: "light",
@@ -14,7 +16,8 @@ const config: ThemeConfig = {
 };
 const theme = extendTheme({ config });
 
-const store = createStore(counterReducer, initialState);
+// const store = createStore(counterReducer, initialState);
+const store = configureStore({ reducer: counterSlice.reducer });
 const Providers: FC<PropsWithChildren> = ({ children }) => (
     <HelmetProvider>
         <ChakraProvider theme={theme}>
