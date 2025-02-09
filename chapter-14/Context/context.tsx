@@ -36,3 +36,5 @@ class ThemedButton extends React.Component {
         );
     }
 }
+
+export default App;
