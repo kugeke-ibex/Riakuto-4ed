@@ -27,7 +27,7 @@ const MemberList: FC<Props> = ({ orgCode }) => {
       }
     };
 
-    // 返ってくるPromiseをあえて無視することで、エラーを明示的にするためにvoid式を利用
+    // 返ってくるPromiseをあえて無視するためにvoid式を利用
     void load();
   }, [orgCode]);
 
